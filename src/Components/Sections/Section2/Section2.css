@@ -1,0 +1,35 @@
+.section2-container {
+    margin: 0;
+    padding: 10px 140px;
+    background-color: white;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Crouselpo {
+    padding: 20px;
+}
+
+.BmeNews {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .section2-container {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .card1 {
+        height: 80px !important;
+    } */
+
+
+}

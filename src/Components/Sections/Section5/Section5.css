@@ -1,0 +1,25 @@
+.section5-container {
+    padding: 0;
+}
+
+.TheJoy {
+    background-image: url('../../../assets/BmwAir.webp');
+    height: 60vh !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bmwWallpaper {
+    background-image: url('../../../assets/BmwAir.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.skyTop {
+    background-image: url('../../../assets/skytop.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
