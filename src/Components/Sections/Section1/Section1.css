@@ -2,17 +2,52 @@
     margin: 0;
 }
 
-.content-card {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-
 .smartAssistance {
     font-size: 45px;
     margin-bottom: 20px;
+    color: white;
+}
+
+.contentCard {
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    border-right: 1px solid white;
+}
+
+.Card2 {
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    border-left: 1px solid white;
+}
+
+.contentCard img {
+    transition: transform 5s ease;
+    /* Smooth zoom-in effect */
+}
+
+.contentCard:hover img {
+    transform: scale(1.1);
+    /* Zoom-in effect */
+}
+
+.Card2 img {
+    transition: transform 5s ease;
+    /* Smooth zoom-in effect */
+}
+
+.Card2:hover img {
+    transform: scale(1.1);
+    /* Zoom-in effect */
+}
+
+.text-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
 }
 
 .read-more-btn {
@@ -32,9 +67,15 @@
 }
 
 @media (max-width: 768px) {
-    .card1 {
-        border-top: none !important;
-        border-right: none !important;
+    .Card2 {
+        border-left: 0px;
+        border-top: 2px solid white;
+    }
+
+    .text-content {
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
     }
 }
 

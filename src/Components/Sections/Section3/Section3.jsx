@@ -15,7 +15,7 @@ function Section2() {
                     <video className="bmwVideo" src={video} autoPlay loop muted />
                 </Col>
                 <Col xs={12} md={4} className="card1"   >
-                    <div className="text-content">
+                    <div className="textcontent3">
                         <h3 style={{ marginBottom: "10px" }}>Become a BMW expert</h3>
                         <p className="BmeNews">
                             <IoIosArrowForward /> BMW EXPLAINED

@@ -3,13 +3,23 @@
     padding: 0;
 }
 
-/* Left Section */
-/* .TheJoy {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-} */
+.TheJoy,
+.bmwWallpaper,
+.skyTop {
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
+
+.TheJoy img {
+    transition: transform 5s ease;
+    /* Smooth zoom-in effect */
+}
+
+.TheJoy:hover img {
+    transform: scale(1.1);
+    /* Zoom-in effect */
+}
 
 .overlay-text-left {
     padding: 10px 20px;
@@ -27,28 +37,32 @@
     margin: 0;
 }
 
-/* Right Section */
+
+.skyTop,
 .bmwWallpaper,
-.skyTop {
-    height: 200px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* position: relative; */
-    /* overflow: hidden; */
+.TheJoy {
+    position: relative;
 }
 
-.bmwWallpaper {
-    background-image: url('../../../assets//bmdWallpaper.webp');
-}
-
-.skyTop {
-    background-image: url('../../../assets/Skytop.webp');
+.TheJoy {
+    border-right: 1px solid white;
 }
 
 .overlay-text {
-    /* position: absolute; */
+    position: absolute;
     bottom: 10px;
+    /* background-color: red; */
+    left: 10px;
+    color: rgb(19, 19, 19);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.overlay-text-left {
+    position: absolute;
+    bottom: 10px;
+    background-color: red;
     left: 10px;
     color: rgb(19, 19, 19);
     padding: 10px;
@@ -59,9 +73,4 @@
 .subtitle-small {
     font-size: 0.9rem;
     margin-top: 5px;
-}
-
-/* Spacing */
-.mb-3 {
-    margin-bottom: 15px;
 }

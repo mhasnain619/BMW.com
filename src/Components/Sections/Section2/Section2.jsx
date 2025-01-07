@@ -14,7 +14,7 @@ function Section2() {
         <Container fluid className="section2-container">
             <Row>
                 <Col xs={12} md={4} className="card1"   >
-                    <div className="text-content">
+                    <div className="textContent">
                         <h3 style={{ marginBottom: "10px" }}>Learn everything about BMW here</h3>
                         <p className="BmeNews">
                             <IoIosArrowForward /> BMW NEWS
