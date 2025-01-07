@@ -1,0 +1,46 @@
+.logoDiv {
+    width: 250px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.logoTExt {
+    font-size: 18px;
+    color: rgb(71, 71, 71);
+}
+
+.pleasure {
+    font-weight: 600;
+    color: rgb(46, 45, 45) !important;
+}
+
+/* Base styles for navbar */
+.navbar {
+    background-color: #ffffff;
+    z-index: 1030;
+    transition: top 0.3s ease;
+}
+
+.navlinks {
+    padding: 10px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-left: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navlinks:hover {
+    background-color: #007bff;
+    color: #edf0f3 !important;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .navlinks {
+        padding-left: 10px !important;
+        margin-left: 5px;
+    }
+}

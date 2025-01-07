@@ -1,0 +1,50 @@
+.section-container {
+    margin: 0;
+}
+
+.content-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.smartAssistance {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    padding: 10px 40px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .card1 {
+        border-top: none !important;
+        border-right: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-card {
+        height: 300px;
+    }
+
+    .smartAssistance {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}

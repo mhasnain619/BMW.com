@@ -1,0 +1,71 @@
+.container-style {
+    height: 100%;
+
+}
+
+.slider-content {
+    padding: 20px;
+}
+
+.heroSec-InfoBox {
+    padding: 30px;
+}
+
+.heroSec-text {
+    width: 1000px;
+    padding: 20px;
+}
+
+.heroPara {
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.readMoreBtn {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.readMoreBtn:hover {
+    background: white;
+    color: rgb(15, 15, 15);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .slider-content {
+        padding: 20px 0px;
+    }
+
+    .mainContainer {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .heroSec-InfoBox {
+        padding: 20px;
+    }
+
+    .heroPara {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .heroSec-text {
+        width: auto;
+        padding: 0px;
+    }
+}
