@@ -6,6 +6,7 @@
 .TheJoy,
 .bmwWallpaper,
 .skyTop {
+    position: relative;
     padding-left: 0px;
     padding-right: 0px;
     overflow: hidden;
@@ -13,12 +14,26 @@
 
 .TheJoy img {
     transition: transform 5s ease;
-    /* Smooth zoom-in effect */
 }
 
 .TheJoy:hover img {
     transform: scale(1.1);
-    /* Zoom-in effect */
+}
+
+.bmwWallpaper img {
+    transition: transform 5s ease;
+}
+
+.bmwWallpaper:hover img {
+    transform: scale(1.1);
+}
+
+.skyTop img {
+    transition: transform 5s ease;
+}
+
+.skyTop:hover img {
+    transform: scale(1.1);
 }
 
 .overlay-text-left {
@@ -37,40 +52,31 @@
     margin: 0;
 }
 
-
-.skyTop,
-.bmwWallpaper,
-.TheJoy {
-    position: relative;
-}
-
 .TheJoy {
     border-right: 1px solid white;
+}
+
+.secTowRow {
+    border-left: 1px solid white;
 }
 
 .overlay-text {
     position: absolute;
     bottom: 10px;
-    /* background-color: red; */
     left: 10px;
-    color: rgb(19, 19, 19);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(43, 42, 42);
     padding: 10px;
-    border-radius: 5px;
     text-align: left;
 }
 
 .overlay-text-left {
     position: absolute;
     bottom: 10px;
-    background-color: red;
+    /* background-color: red; */
     left: 10px;
-    color: rgb(19, 19, 19);
+    color: rgb(238, 233, 233);
     padding: 10px;
-    border-radius: 5px;
     text-align: left;
-}
-
-.subtitle-small {
-    font-size: 0.9rem;
-    margin-top: 5px;
 }

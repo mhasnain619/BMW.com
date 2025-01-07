@@ -17,8 +17,8 @@ const Section5 = () => {
                         <p className="subtitle">The Joy of the Ever-Evolving</p>
                     </div>
                 </Col>
-                <Col xs={12} md={4}>
-                    <Row>
+                <Col className='secTowRow' xs={12} md={4}>
+                    <Row >
                         <Col className="bmwWallpaper">
                             <img src={img2} width={"100%"} />
                             <div className="overlay-text">
@@ -26,7 +26,7 @@ const Section5 = () => {
                             </div>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{ borderTop: '1px solid white' }}>
                         <Col className="skyTop">
                             <img src={img3} width={"100%"} />
                             <div className="overlay-text">
