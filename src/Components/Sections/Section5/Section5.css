@@ -1,25 +1,67 @@
+/* General Container */
 .section5-container {
     padding: 0;
 }
 
-.TheJoy {
-    background-image: url('../../../assets/BmwAir.webp');
-    height: 60vh !important;
-    background-position: center;
+/* Left Section */
+/* .TheJoy {
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+} */
+
+.overlay-text-left {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Right Section */
+.bmwWallpaper,
+.skyTop {
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* position: relative; */
+    /* overflow: hidden; */
 }
 
 .bmwWallpaper {
-    background-image: url('../../../assets/BmwAir.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('../../../assets//bmdWallpaper.webp');
 }
 
 .skyTop {
-    background-image: url('../../../assets/skytop.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('../../../assets/Skytop.webp');
+}
+
+.overlay-text {
+    /* position: absolute; */
+    bottom: 10px;
+    left: 10px;
+    color: rgb(19, 19, 19);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.subtitle-small {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Spacing */
+.mb-3 {
+    margin-bottom: 15px;
 }
