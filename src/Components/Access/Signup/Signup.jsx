@@ -2,16 +2,19 @@
 import React, { useState } from "react";
 import styles from './Signup.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import signupImg from '../../assets/easy-help.png'
+import signupImg from '../../../assets/easy-help.png'
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { FiArrowLeftCircle } from "react-icons/fi";
-
-const Signup = ({ setIsLoggedIn }) => {
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+const Signup = () => {
     const [userData, setUserData] = useState({
         name: '',
         email: '',
         password: ''
     });
+    const navigate = useNavigate();
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUserData(prevData => ({
@@ -19,12 +22,13 @@ const Signup = ({ setIsLoggedIn }) => {
             [name]: value
         }));
     };
+
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent page refresh
-        console.log(userData); // Output all user data
+        e.preventDefault();
+        console.log(userData);
         localStorage.setItem("userData", JSON.stringify(userData));
-        console.log("User data saved to localStorage:", userData);
-        window.location.href = "/login"
+        alert("User data saved to localStorage:", userData);
+        navigate("/login")
     };
     return (
         <div className={styles.mainContainer}>
@@ -37,7 +41,7 @@ const Signup = ({ setIsLoggedIn }) => {
                         <h3>Sign up</h3>
                         <p>
                             Already have an account?
-                            <a href="#" onClick={setIsLoggedIn}>Login here</a>
+                            <Link to="/login">Login here</Link>
                         </p>
                         <Form>
                             <Form.Group controlId="formName" className="mb-3 ">

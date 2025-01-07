@@ -1,58 +1,75 @@
-// App.js
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import signupImg from '../../assets/easy-help.png'
-import styles from './Login.module.css'
+import signupImg from '../../../assets/easy-help.png';
+import styles from './Login.module.css';
 import { FiArrowLeftCircle } from "react-icons/fi";
 import { Form, Button, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Signup = ({ setIsLoggedIn }) => {
-    const [userCridentials, setserCridentials] = useState({
+const Signup = () => {
+    const [userCredentials, setUserCredentials] = useState({
         email: '',
         password: '',
     });
-    const handleChange = () => {
-        const { name, value } = e.target
-        setserCridentials(prevData => ({
+    const navigate = useNavigate();
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUserCredentials(prevData => ({
             ...prevData,
-            [name]: value
-        }))
-    }
+            [name]: value,
+        }));
+    };
+
     const handleSubmit = (e) => {
-        const storedUserData = JSON.parse(localStorage.getItem('userData'))
+        e.preventDefault();
+        const storedUserData = JSON.parse(localStorage.getItem('userData'));
         if (!storedUserData) {
-            console.log('No Data Found........');
-            return
+            alert('No user data found. Please sign up first.');
+            return;
         }
-        const { email, password } = userCridentials
+
+        const { email, password } = userCredentials;
         if (email === storedUserData.email && password === storedUserData.password) {
-            setIsLoggedIn(true)
+            alert('Login successful!');
+            navigate('/')
         } else {
-            alert('Invalid Email or Password')
+            alert('Invalid email or password');
         }
-    }
+    };
+
     return (
         <div className={styles.mainContainer}>
             <div className={styles.CardContainer}>
                 <Row>
                     <Col md={6}>
-                        <a href="#">
-                            <FiArrowLeftCircle className={styles.backArrowIcon} />
-                        </a>
+                        <Link to="/"><FiArrowLeftCircle className={styles.backArrowIcon} /></Link>
                         <h3>Login</h3>
                         <p>
-                            Dont't have an account?
-                            <a href="#" onClick={setIsLoggedIn}>Signup here</a>
+                            Don't have an account?
+                            <Link to="/signup"> Signup here</Link>
                         </p>
-                        <Form>
+                        <Form onSubmit={handleSubmit}>
                             <Form.Group controlId="formEmail" className="mb-3 name">
                                 <Form.Label>Email ID</Form.Label>
-                                <Form.Control name="email" onChange={handleChange} type="email" placeholder="Enter your email" />
+                                <Form.Control
+                                    name="email"
+                                    onChange={handleChange}
+                                    value={userCredentials.email}
+                                    type="email"
+                                    placeholder="Enter your email"
+                                />
                             </Form.Group>
 
                             <Form.Group controlId="formPassword" className="mb-3 name">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control name="password" onChange={handleChange} type="password" placeholder="Enter your password" />
+                                <Form.Control
+                                    name="password"
+                                    onChange={handleChange}
+                                    value={userCredentials.password}
+                                    type="password"
+                                    placeholder="Enter your password"
+                                />
                             </Form.Group>
 
                             <Form.Group controlId="formCheckbox" className="mb-3">
@@ -62,7 +79,7 @@ const Signup = ({ setIsLoggedIn }) => {
                                 />
                             </Form.Group>
 
-                            <Button onClick={handleSubmit} variant="primary" type="submit" style={{ width: "100%" }}>
+                            <Button variant="primary" type="submit" style={{ width: "100%" }}>
                                 Submit
                             </Button>
                         </Form>
@@ -74,11 +91,12 @@ const Signup = ({ setIsLoggedIn }) => {
                                 justifyContent: "center",
                                 alignItems: "center",
                                 height: "100%",
-                            }} >
+                            }}>
                             <img
                                 src={signupImg}
-                                alt="Login Image"
-                                style={{ maxWidth: "100%", maxHeight: "300px" }} />
+                                alt="Login Illustration"
+                                style={{ maxWidth: "100%", maxHeight: "300px" }}
+                            />
                         </div>
                     </Col>
                 </Row>
