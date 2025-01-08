@@ -1,0 +1,51 @@
+.Year25 {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
+
+.year25Text {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(43, 42, 42);
+    padding: 10px;
+    text-align: left;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+}
+
+.x5 {
+    border-right: 1px solid white;
+}
+
+.x6 {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.x7 {
+    border-left: 1px solid white;
+}
+
+.Year25 img {
+    transition: transform 5s ease;
+}
+
+.Year25:hover img {
+    transform: scale(1.1);
+}
